@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -9,19 +9,26 @@ lerna-debug.log*
 
 # Dependency folders
 node_modules/
+student-management-backend/node_modules/
+student-management-frontend/node_modules/
 
 # Build output
 dist/
 dist-ssr/
+student-management-backend/dist/
+student-management-frontend/dist/
 
 # Local env
 *.local
 .env
+.env.*
+!*.example
+!.env.example
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 
 # Windows/Misc
@@ -31,6 +38,21 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Installers / Binaries
+*.msi
+*.exe
+*.zip
+*.7z
+*.rar
+
+# MongoDB dumps
+dump/
+mongo_dump/
+
+# Temporary
+temp/
+*.tmp
 
 # DO NOT ignore project folders
 # student-management-backend/
