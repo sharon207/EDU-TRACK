@@ -19,11 +19,13 @@ student-management-backend/dist/
 student-management-frontend/dist/
 
 # Local env
+node_modules/
+dist/
+dist-ssr/
 *.local
 .env
-.env.*
-!*.example
-!.env.example
+*.msi
+
 
 # Editor directories and files
 .vscode/*
