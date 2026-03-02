@@ -6,7 +6,7 @@
       
       <!-- 🔍 SEARCH USER -->
       <input
-        v-model="userSearch"
+        v-model="autoprefixer"
         placeholder="Search user by name or email"
         @input="filterUsers"
       />
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import autoprefixer from "autoprefixer";
 import axios from "axios";
 
 export default {

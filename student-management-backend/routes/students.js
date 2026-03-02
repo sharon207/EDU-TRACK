@@ -6,27 +6,15 @@ const router = express.Router();
 // ------------------ STUDENTS ------------------
 
 // Add student
-app.post("/api/students", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const student = new Student({
-      name: req.body.name,
-      rollNumber: req.body.rollNumber,
-      course: req.body.course,
-      email: req.body.email || "",
-      phone: req.body.phone || "",
-      address: req.body.address || "",
-      attendance: [],
-      marks: [],
-    });
-
+    const student = new Student(req.body);
     await student.save();
-    res.status(201).json({ message: "Student added", student });
+    res.status(201).json(student);
   } catch (err) {
-    console.error("Add Student Error:", err.message);
     res.status(500).json({ message: err.message });
   }
 });
-
 
 // Get all students
 router.get("/", async (req, res) => {
